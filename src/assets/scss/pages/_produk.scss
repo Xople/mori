@@ -1,0 +1,249 @@
+@import '../theme-color';
+@import '../responsive';
+@import '../variable';
+
+
+.filsearch {
+
+  .wrap-search {
+    position: relative;
+
+    .search-section {
+      width: 90%;
+      height: 60px;
+      box-shadow:
+        0 0px 2.2px rgba(0, 0, 0, 0.025),
+        0 0px 5.3px rgba(0, 0, 0, 0.032),
+        0 0px 10px rgba(0, 0, 0, 0.038),
+        0 0px 17.9px rgba(0, 0, 0, 0.044),
+        0 0px 33.4px rgba(0, 0, 0, 0.052),
+        0 0px 80px rgba(0, 0, 0, 0.07);
+
+      border-radius: 10px;
+
+      input[type=text] {
+        width: 70%;
+        height: 40px;
+        outline: none;
+        background: none;
+        border: none;
+        padding: 0 0 0 1em;
+      }
+
+      .button-search {
+        width: 90px;
+        height: 90px;
+        background-color: $mainColor;
+        color: $lightColor;
+        border: none;
+        outline: none;
+        position: absolute;
+        top: -20px;
+        right: 15px;
+
+        i {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  .wrap-filter {
+    font-weight: bold;
+
+    label {
+      cursor: pointer;
+    }
+
+    .category {
+      width: 90%;
+      height: 60px;
+      box-shadow:
+        0 0px 2.2px rgba(0, 0, 0, 0.025),
+        0 0px 5.3px rgba(0, 0, 0, 0.032),
+        0 0px 10px rgba(0, 0, 0, 0.038),
+        0 0px 17.9px rgba(0, 0, 0, 0.044),
+        0 0px 33.4px rgba(0, 0, 0, 0.052),
+        0 0px 80px rgba(0, 0, 0, 0.07);
+
+      border-radius: 10px;
+      margin: auto;
+
+      position: relative;
+
+      .box-category {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 120%;
+        height: 0;
+        border-radius: 10px;
+        background-color: $whiteColor;
+        transition: .5s;
+        z-index: 2;
+        height: auto;
+        padding: 1em;
+        box-shadow:
+          0 0.2px 2.2px rgba(0, 0, 0, 0.02),
+          0 0.6px 5.3px rgba(0, 0, 0, 0.028),
+          0 1.1px 10px rgba(0, 0, 0, 0.035),
+          0 2px 17.9px rgba(0, 0, 0, 0.042),
+          0 3.8px 33.4px rgba(0, 0, 0, 0.05),
+          0 9px 80px rgba(0, 0, 0, 0.07);
+        font-size: 12px;
+
+        .option {
+          &:hover {
+            cursor: pointer;
+            border-radius: 8px;
+            background-color: $gray;
+          }
+        }
+
+        @media #{$breakpoint-xs} {
+          right: -10px;
+        }
+      }
+
+
+      @media #{$breakpoint-md} {
+        font-size: 12px;
+      }
+    }
+
+    .filter {
+      width: 90%;
+      height: 60px;
+      box-shadow:
+        0 0px 2.2px rgba(0, 0, 0, 0.025),
+        0 0px 5.3px rgba(0, 0, 0, 0.032),
+        0 0px 10px rgba(0, 0, 0, 0.038),
+        0 0px 17.9px rgba(0, 0, 0, 0.044),
+        0 0px 33.4px rgba(0, 0, 0, 0.052),
+        0 0px 80px rgba(0, 0, 0, 0.07);
+
+      border-radius: 10px;
+      margin: auto;
+      position: relative;
+
+      .box-filter {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 120%;
+        height: 0;
+        border-radius: 10px;
+        background-color: $whiteColor;
+        transition: .5s;
+        z-index: 2;
+        height: auto;
+        padding: 1em;
+        box-shadow:
+          0 0.2px 2.2px rgba(0, 0, 0, 0.02),
+          0 0.6px 5.3px rgba(0, 0, 0, 0.028),
+          0 1.1px 10px rgba(0, 0, 0, 0.035),
+          0 2px 17.9px rgba(0, 0, 0, 0.042),
+          0 3.8px 33.4px rgba(0, 0, 0, 0.05),
+          0 9px 80px rgba(0, 0, 0, 0.07);
+        font-size: 12px;
+
+        .option {
+          &:hover {
+            cursor: pointer;
+            border-radius: 8px;
+            background-color: $gray;
+          }
+        }
+
+        @media #{$breakpoint-xs} {
+          right: -10px;
+        }
+
+      }
+
+      @media #{$breakpoint-md} {
+        font-size: 12px;
+      }
+
+    }
+
+    @media #{$breakpoint-xs} {
+      margin-top: 3em;
+    }
+  }
+}
+
+.products {
+  width: 100%;
+
+  .card-product {
+    width: 100%;
+    height: 280px;
+    box-shadow:
+      0 0 2.6px rgba(0, 0, 0, 0.07),
+      0 0 6.3px rgba(0, 0, 0, 0.05),
+      0 0 11.8px rgba(0, 0, 0, 0.042),
+      0 0 21px rgba(0, 0, 0, 0.035),
+      0 0 39.3px rgba(0, 0, 0, 0.028),
+      0 0 94px rgba(0, 0, 0, 0.02);
+    border-radius: 8px;
+    margin-top: 1.5em;
+    background-color: $whiteColor;
+    font-family: 'Josefin Sans SemiBold';
+    color: $mainColor;
+
+    .img-card {
+      width: 100%;
+      height: 70%;
+      border-radius: 8px 8px 0 0;
+      background-color: $gray;
+      position: relative;
+      overflow: hidden;
+
+      .shadow {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 120%;
+        background-image: linear-gradient(to bottom, rgba(57, 59, 68, 0.5), rgba(0, 0, 0, 0));
+        border-radius: 8px 8px 0 0;
+      }
+
+      .status {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        border-radius: 8px;
+        font-size: 14px;
+
+        @media #{$breakpoint-xs} {
+          font-size: 10px;
+        }
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .info-product {
+
+      h5 {
+        @media #{$breakpoint-xs} {
+          font-size: 18px;
+        }
+
+      }
+
+      p {
+
+        @media #{$breakpoint-xs} {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

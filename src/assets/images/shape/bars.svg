@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="27" height="21" viewBox="0 0 27 21">
+  <g id="bars" transform="translate(1.5 19.5) rotate(-90)">
+    <path id="Path_3" data-name="Path 3" d="M0,15V0" transform="translate(9 9)" fill="none" stroke="#393b44" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+    <path id="Path_4" data-name="Path 4" d="M0,24V0" transform="translate(18)" fill="none" stroke="#393b44" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+    <path id="Path_5" data-name="Path 5" d="M0,6V0" transform="translate(0 18)" fill="none" stroke="#393b44" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+  </g>
+</svg>

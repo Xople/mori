@@ -1,0 +1,306 @@
+@import '../theme-color';
+@import '../responsive';
+@import '../variable';
+
+
+.wrap-sign-in {
+  height: 100vh;
+  overflow: hidden;
+  margin-left: 0;
+
+  .left {
+    width: 100%;
+    height: 100%;
+
+    .img {
+      width: 100%;
+      height: 100%;
+      position: relative;
+
+      img {
+        width: 110%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: -50px;
+      }
+
+      .shadow {
+        width: 110%;
+        height: 100%;
+        background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+        position: absolute;
+        top: 0;
+        left: -50px;
+
+        svg {
+          width: 250px;
+          height: 250px;
+
+          @media #{$breakpoint-md} {
+            width: 200px;
+            height: 200px;
+          }
+        }
+      }
+
+      .shape-top {
+        position: absolute;
+        top: -10px;
+        right: -15px;
+        transform: rotate(-180deg);
+      }
+
+      .shape-bottom {
+        position: absolute;
+        bottom: -10px;
+        left: -50px;
+      }
+    }
+
+    @media #{$breakpoint-xs} {
+      display: none;
+    }
+  }
+
+  .right {
+    color: $mainColor;
+    margin-left: 1.5em;
+    padding-left: 1.5em;
+    position: relative;
+
+    .shape {
+      display: none;
+
+      .shape4 {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        @media #{$breakpoint-sm} {
+          top: -65px;
+        }
+      }
+
+      .logo4 {
+        position: absolute;
+        top: 25px;
+        left: 40px;
+        height: 40px;
+        width: 40px;
+      }
+
+
+      @media #{$breakpoint-xs} {
+        display: block;
+      }
+    }
+
+    h2 {
+      @media #{$breakpoint-xs} {
+        margin-top: 4em;
+        text-align: center;
+      }
+    }
+
+    .form-group {
+      &:nth-child(1n + 2) {
+        @media #{$breakpoint-xs} {
+          padding-top: .7em;
+        }
+      }
+
+      .form-control {
+        height: 45px;
+        font-size: 14px;
+
+        @media #{$breakpoint-xs} {
+          height: 50px;
+        }
+
+        &:focus {
+          border: 1px solid $mainColor;
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 1px 4px rgba(57, 59, 68, 0.3);
+          outline: 0 none;
+        }
+      }
+    }
+
+    .button-blue-sign {
+      width: 100%;
+      padding: .5em 0 .5em 0;
+      background-color: $mainColor;
+      border-radius: 8px;
+      color: $whiteColor;
+      font-weight: bold;
+      border: none;
+
+      @media #{$breakpoint-xs} {
+        padding: .8em 0 .8em 0;
+      }
+    }
+
+    @media #{$breakpoint-xs} {
+      padding: 1em;
+      margin-left: 0;
+    }
+  }
+
+  @media #{$breakpoint-xs} {
+    height: auto;
+    align-items: center;
+  }
+}
+
+.wrap-sign-up {
+  height: 100vh;
+  overflow: hidden;
+  margin-left: 0;
+
+
+  .left {
+    color: $mainColor;
+    position: relative;
+    margin-left: 1.5em;
+
+    .shape {
+      display: none;
+
+      .shape4 {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        @media #{$breakpoint-sm} {
+          top: -65px;
+        }
+      }
+
+      .logo4 {
+        position: absolute;
+        top: 25px;
+        left: 40px;
+        height: 40px;
+        width: 40px;
+      }
+
+
+      @media #{$breakpoint-xs} {
+        display: block;
+      }
+    }
+
+    h2 {
+      @media #{$breakpoint-xs} {
+        margin-top: 4em;
+        text-align: center;
+      }
+    }
+
+    .form-group {
+      &:nth-child(1n + 2) {
+        @media #{$breakpoint-xs} {
+          padding-top: .7em;
+        }
+      }
+
+      .form-control {
+        height: 45px;
+        font-size: 14px;
+
+        @media #{$breakpoint-xs} {
+          height: 50px;
+        }
+
+        &:focus {
+          border: 1px solid $mainColor;
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 1px 4px rgba(57, 59, 68, 0.3);
+          outline: 0 none;
+        }
+      }
+    }
+
+    .button-blue-sign {
+      width: 100%;
+      padding: .5em 0 .5em 0;
+      background-color: $mainColor;
+      border-radius: 8px;
+      color: $whiteColor;
+      font-weight: bold;
+      border: none;
+
+      @media #{$breakpoint-xs} {
+        padding: .8em 0 .8em 0;
+      }
+    }
+
+    @media #{$breakpoint-xs} {
+      padding: 1em;
+      margin-left: 0;
+    }
+  }
+
+  .right {
+    width: 100%;
+    height: 100%;
+
+    .img {
+      width: 100%;
+      height: 100%;
+      position: relative;
+
+      img {
+        width: 110%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        right: -130px;
+      }
+
+      .shadow {
+        width: 110%;
+        height: 100%;
+        background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+        position: absolute;
+        top: 0;
+        right: -130px;
+
+        svg {
+          width: 250px;
+          height: 250px;
+
+          @media #{$breakpoint-md} {
+            width: 200px;
+            height: 200px;
+          }
+        }
+      }
+
+      .shape-top {
+        position: absolute;
+        top: -10px;
+        right: -120px;
+        transform: rotate(-180deg);
+      }
+
+      .shape-bottom {
+        position: absolute;
+        bottom: -10px;
+        left: 65px;
+      }
+    }
+
+    @media #{$breakpoint-xs} {
+      display: none;
+    }
+  }
+
+  @media #{$breakpoint-xs} {
+    height: auto;
+    align-items: center;
+  }
+}

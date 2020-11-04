@@ -1,0 +1,202 @@
+@import '../theme-color';
+@import '../responsive';
+@import '../variable';
+
+.profile {
+  .wrap-profile {
+    .left {
+      .wrap-option {
+        .option {
+          padding: 1em .5em 1em .5em;
+          cursor: pointer;
+          border-radius: 5px;
+          position: relative;
+
+          .icon {
+            width: 15%;
+
+            i {
+              font-size: 1.5em;
+            }
+
+            @media #{$breakpoint-md} {
+              width: 30%;
+            }
+          }
+
+          .name-option {
+            width: 70%;
+          }
+
+          .active {
+            position: absolute;
+            top: 5px;
+            right: 0;
+            width: 5px;
+            height: 80%;
+            background-color: $mainColor;
+          }
+
+          &:hover {
+            background-color: $gray;
+          }
+        }
+      }
+
+      @media #{$breakpoint-xs} {
+        display: none;
+      }
+    }
+
+    .right {
+      .info-top {
+        width: 100%;
+        height: 168px;
+
+        .img {
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          position: relative;
+
+          img {
+            width: 148px;
+            height: 148px;
+            border-radius: 50%;
+            object-fit: cover;
+
+            @media #{$breakpoint-lg} {
+              width: 120px;
+              height: 120px;
+            }
+
+            @media #{$breakpoint-md} {
+              width: 100px;
+              height: 100px;
+            }
+
+            @media #{$breakpoint-xs} {
+              width: 120px;
+              height: 120px;
+            }
+          }
+        }
+
+        .name-place {
+
+          h5 {
+            @media #{$breakpoint-xs} {
+              font-size: 1.3em;
+            }
+          }
+
+          span {
+            @media #{$breakpoint-xs} {
+              font-size: 1em;
+            }
+          }
+
+          @media #{$breakpoint-xs} {
+            width: 120%;
+            background-color: $whiteColor;
+            padding: .5em 1.3em .5em 1.3em;
+            border-radius: 8px;
+          }
+        }
+
+      }
+
+      .info-center {
+
+        .form-group {
+          &:nth-child(1n + 2) {
+            @media #{$breakpoint-xs} {
+              margin-top: 2em;
+            }
+          }
+        }
+
+        .input-info {
+          width: 100%;
+          height: 45px;
+          background-color: $whiteColor;
+          box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+          text-align: center;
+          border: none;
+          outline: none;
+          border-radius: 8px;
+
+
+          @media #{$breakpoint-xs} {
+            height: 50px;
+          }
+        }
+      }
+
+      .button-bottom {
+
+        button {
+          padding: .7em 1.5em .7em 1.5em;
+          background-color: $mainColor;
+          color: $whiteColor;
+          box-shadow:
+            0 0 3px 1px rgba(0, 0, 0, 0.4);
+          border-radius: 8px;
+          border: none;
+          font-weight: bold;
+        }
+      }
+
+
+      @media #{$breakpoint-xs} {
+        padding-bottom: 5em;
+      }
+    }
+
+
+  }
+
+  .option-bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: $whiteColor;
+    box-shadow: 0 -5px 6px 1px rgba(0, 0, 0, 0.1);
+    display: none;
+
+    .wrap-option-bottom {
+      height: 60px;
+
+      .option {
+        height: 100%;
+        text-align: center;
+        cursor: pointer;
+        position: relative;
+
+        i {
+          font-size: 1.5em;
+          padding-top: .7em;
+        }
+
+        .active {
+          width: 100%;
+          height: 6px;
+          background-color: $mainColor;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+        }
+
+        &:hover {
+          background-color: $gray;
+        }
+      }
+    }
+
+    @media #{$breakpoint-xs} {
+      display: block;
+    }
+  }
+
+}

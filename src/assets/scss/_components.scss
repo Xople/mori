@@ -1,0 +1,60 @@
+@import 'theme-color';
+@import 'variable';
+
+.button {
+  height: 40px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-weight: bold;
+  padding: 0 .7em 0 .7em;
+}
+
+.button-dark {
+  background-color: $mainColor;
+  color: $lightColor;
+}
+
+.button-light {
+  background-color: $lightColor;
+  color: $mainColor;
+}
+
+.text-light {
+  color: $lightColor;
+}
+
+.text-dark {
+  color: $mainColor;
+}
+
+.bg-dark {
+  background-color: $mainColor;
+  color: $lightColor;
+}
+
+.bg-light {
+  background-color: $lightColor;
+  color: $mainColor;
+}
+
+@each $name,
+$point in $pointRounded {
+  .button-rounded-#{$name} {
+    border-radius: $point;
+  }
+}
+
+@each $name,
+$value in $sizeButtonPercent {
+  .button-width-#{$name} {
+    width: $value;
+  }
+}
+
+@each $name,
+$value in $sizeButtonPixel {
+  .button-width-#{$name} {
+    width: $value;
+  }
+}

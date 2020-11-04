@@ -1,0 +1,92 @@
+@import '../theme-color';
+@import '../responsive';
+@import '../variable';
+
+
+.detail-product {
+  width: 100%;
+
+  .left {
+    width: 100%;
+
+    .img {
+      width: 100%;
+      height: 340px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 24px;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .right {
+    .size {
+      .card-size {
+        width: 100%;
+        padding: 1em 0 1em 0;
+        background-color: $whiteColor;
+        border: 2px solid $mainColor;
+        position: relative;
+        border-radius: 8px;
+        cursor: pointer;
+        overflow: hidden;
+
+        .active {
+          position: absolute;
+          bottom: -10px;
+          left: 0;
+          width: 150%;
+          height: 25px;
+          border: 2px solid $mainColor;
+          margin: 0;
+          z-index: 3;
+          background-color: $mainColor;
+        }
+
+        @media #{$breakpoint-xs} {
+          width: 80%;
+        }
+      }
+    }
+
+    @media #{$breakpoint-xs} {
+      padding-bottom: 3em;
+      margin-top: 2em;
+    }
+  }
+}
+
+.description {
+  padding-bottom: 7em;
+}
+
+.price-info {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 4;
+
+  .right {
+
+    .button-cart {
+      position: absolute;
+      bottom: -15px;
+      right: 0;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: $thirdColor;
+      color: $mainColor;
+      font-size: 20px;
+      cursor: pointer;
+
+      @media #{$breakpoint-xs} {
+        right: 10px;
+      }
+    }
+  }
+
+}

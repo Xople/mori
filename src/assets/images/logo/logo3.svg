@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="217.725" height="232.992" viewBox="0 0 217.725 232.992">
+  <g id="Group_80" data-name="Group 80" transform="translate(-289.275 -267.504)">
+    <circle id="Ellipse_12" data-name="Ellipse 12" cx="78.328" cy="78.328" r="78.328" transform="translate(289.275 343.84)" fill="#fff"/>
+    <circle id="Ellipse_13" data-name="Ellipse 13" cx="78.328" cy="78.328" r="78.328" transform="translate(294.585 336.539)" fill="#d2d2d2"/>
+    <circle id="Ellipse_11" data-name="Ellipse 11" cx="108.863" cy="108.863" r="108.863" transform="translate(289.275 267.504)" fill="#fff"/>
+    <g id="Group_77" data-name="Group 77" transform="translate(338.344 332.504)">
+      <text id="Mori" transform="translate(0 43)" fill="#393b44" font-size="52" font-family="Baliday"><tspan x="0" y="0">Mori</tspan></text>
+      <text id="Wardrobe" transform="translate(49.397 81.095)" fill="#393b44" font-size="30" font-family="Baliday"><tspan x="0" y="0">Wardrobe</tspan></text>
+      <path id="Path_1" data-name="Path 1" d="M139-857.125s37.034-8.044,41.63-5.171,61.479-5.171,79.865,0,19.161,5.171,19.161,5.171" transform="translate(-139 915.921)" fill="none" stroke="#393b44" stroke-width="2"/>
+      <path id="Path_2" data-name="Path 2" d="M139-861.983s11.142-2.42,12.525-1.556,18.5-1.556,24.028,0,5.765,1.556,5.765,1.556" transform="translate(-139 931.412)" fill="none" stroke="#393b44" stroke-width="2"/>
+    </g>
+  </g>
+</svg>

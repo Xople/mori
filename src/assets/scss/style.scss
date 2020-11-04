@@ -1,0 +1,413 @@
+@import 'components';
+@import 'theme-color';
+@import 'responsive';
+@import 'fonts';
+@import '../css/all.css';
+@import '../css/bootstrap.css';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6,
+// p {
+//   color: $mainColor;
+// }
+
+// Sidebar
+#sidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+
+  &:checked~.sidebar {
+    opacity: 1;
+    z-index: 4;
+    top: 0;
+    transition: .6s;
+  }
+
+  &:checked~.sidebar label {
+    opacity: 1;
+  }
+
+  &:checked~.wrapper {
+    height: 90vh;
+    opacity: 0;
+    overflow: hidden;
+  }
+
+}
+
+.sidebar {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: -800px;
+  left: 0;
+  transition: .6s;
+  z-index: -4;
+  opacity: 0;
+  background-color: $whiteColor;
+  overflow: hidden;
+
+  label {
+    cursor: pointer;
+    transition: .5s;
+    transition-delay: .6s;
+    opacity: 0;
+  }
+
+  img,
+  svg {
+    width: 80px;
+    height: 50px;
+  }
+}
+
+// end sidebar
+
+
+.wrapper {
+  a {
+    text-decoration: none;
+  }
+
+  font-family: 'Josefin Sans Regular';
+
+  .header {
+    width: 100%;
+    height: 95px;
+    box-shadow:
+      0 0.9px 2.6px rgba(0, 0, 0, 0.07),
+      0 2.2px 6.3px rgba(0, 0, 0, 0.05),
+      0 4.1px 11.8px rgba(0, 0, 0, 0.042),
+      0 7.4px 21px rgba(0, 0, 0, 0.035),
+      0 13.8px 39.3px rgba(0, 0, 0, 0.028),
+      0 33px 94px rgba(0, 0, 0, 0.02);
+
+
+    .left {
+      width: 40%;
+      height: 100%;
+
+      .img {
+        width: 120px;
+        height: 80%;
+
+        img {
+          width: 100%;
+          height: 100%;
+
+          @media #{$breakpoint-xs} {
+            width: 80px;
+            height: 100%;
+          }
+        }
+
+        @media #{$breakpoint-xs} {
+          width: 120px;
+          height: 60%;
+        }
+      }
+    }
+
+    .right {
+
+      .wrap-button {
+
+        @media #{$breakpoint-xs} {
+          display: none;
+        }
+      }
+
+      .wrap-sidebar {
+        display: none;
+
+        label {
+          cursor: pointer;
+        }
+
+
+        @media #{$breakpoint-xs} {
+          display: block;
+        }
+      }
+    }
+
+  }
+
+  .hero {
+    width: 100%;
+    height: 580px;
+    position: relative;
+    font-family: 'Josefin Sans Bold';
+
+    .shadow {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(to right, $mainColor, rgba(0, 0, 0, 0));
+      z-index: -2;
+    }
+
+    .img-hero {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: rotateY(180deg);
+      background-image: url('../images/background/bg1.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      z-index: -3;
+    }
+
+    .content-hero {
+      width: 35%;
+
+      @media #{$breakpoint-xs} {
+        width: 100%;
+      }
+    }
+  }
+
+  .preview-products {
+    width: 100%;
+    overflow: hidden;
+
+    .top {
+      width: 100%;
+
+      .container {
+        position: relative;
+
+        .suit {
+          position: absolute;
+          top: 150px;
+          right: -100px;
+          z-index: -3;
+          transform: rotate(50deg);
+
+          @media #{$breakpoint-xs} {
+            display: none;
+          }
+        }
+
+        h2 {
+          position: relative;
+
+          &::before {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            right: -60px;
+            width: 100%;
+            height: 3px;
+            background-color: $mainColor;
+          }
+
+          &::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: -20px;
+            width: 100%;
+            height: 3px;
+            background-color: $mainColor;
+          }
+
+          @media #{$breakpoint-xs} {
+            font-size: 24px;
+          }
+        }
+
+        .top-suits {
+          width: 100%;
+
+          .card-suit {
+            width: 100%;
+            height: 280px;
+            box-shadow:
+              0 0 2.6px rgba(0, 0, 0, 0.07),
+              0 0 6.3px rgba(0, 0, 0, 0.05),
+              0 0 11.8px rgba(0, 0, 0, 0.042),
+              0 0 21px rgba(0, 0, 0, 0.035),
+              0 0 39.3px rgba(0, 0, 0, 0.028),
+              0 0 94px rgba(0, 0, 0, 0.02);
+            border-radius: 8px;
+            margin-top: 1.5em;
+            background-color: $whiteColor;
+
+            .img-card {
+              width: 100%;
+              height: 70%;
+              border-radius: 8px 8px 0 0;
+              background-color: $gray;
+
+              @media #{$breakpoint-xs} {
+                height: 65%;
+              }
+            }
+
+            @media #{$breakpoint-xs} {
+              height: 210px;
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+
+    .new {
+      width: 100%;
+
+      .container {
+        position: relative;
+
+        .suit {
+          position: absolute;
+          top: 150px;
+          left: -100px;
+          z-index: -3;
+
+          @media #{$breakpoint-xs} {
+            display: none;
+          }
+        }
+
+        h2 {
+          position: relative;
+
+          .triangle1 {
+            position: absolute;
+            top: -20px;
+            left: -80px;
+            rotate: 180deg;
+          }
+
+          .triangle2 {
+            position: absolute;
+            bottom: -20px;
+            right: -80px;
+            rotate: 180deg;
+          }
+
+          @media #{$breakpoint-xs} {
+            font-size: 24px;
+          }
+        }
+
+        .new-suits {
+          width: 100%;
+
+          .card-suit {
+            width: 100%;
+            height: 280px;
+            box-shadow:
+              0 0 2.6px rgba(0, 0, 0, 0.07),
+              0 0 6.3px rgba(0, 0, 0, 0.05),
+              0 0 11.8px rgba(0, 0, 0, 0.042),
+              0 0 21px rgba(0, 0, 0, 0.035),
+              0 0 39.3px rgba(0, 0, 0, 0.028),
+              0 0 94px rgba(0, 0, 0, 0.02);
+            border-radius: 8px;
+            margin-top: 1.5em;
+            background-color: $whiteColor;
+
+            .img-card {
+              width: 100%;
+              height: 70%;
+              border-radius: 8px 8px 0 0;
+              background-color: $gray;
+
+              @media #{$breakpoint-xs} {
+                height: 65%;
+              }
+            }
+
+            @media #{$breakpoint-xs} {
+              height: 210px;
+              font-size: 14px;
+            }
+          }
+        }
+      }
+
+    }
+  }
+
+  .information {
+    width: 100%;
+    background-color: $secondColor;
+
+
+    .container {
+
+      .left {
+        width: 30%;
+        display: flex;
+
+        img {
+          width: 170px;
+          height: 120px;
+        }
+
+        @media #{$breakpoint-xs} {
+          width: 100%;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 1.5em;
+        }
+      }
+
+      .right {
+        .box {
+          padding: 0 1.3em 0 1.3em;
+
+          h4 {
+            color: $thirdColor;
+          }
+
+          a {
+            color: $whiteColor;
+            text-decoration: none;
+            padding: .7em 0;
+          }
+
+          @media #{$breakpoint-xs} {
+            margin-top: 1.5em;
+          }
+        }
+
+        @media #{$breakpoint-xs} {
+          flex-direction: column;
+        }
+      }
+
+      @media #{$breakpoint-xs} {
+        flex-direction: column;
+        justify-content: space-between;
+      }
+    }
+
+  }
+
+  @import './pages/produk';
+  @import './pages/detailProduct';
+  @import './pages/cart';
+  @import './pages/profile';
+  @import './pages/sign';
+}
