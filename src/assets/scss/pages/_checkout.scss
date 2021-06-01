@@ -1,0 +1,109 @@
+.wrap-checkout {
+  height: 100vh;
+
+  .checkout {
+    width: 100%;
+
+    .row {
+      height: 400px;
+      color: $whiteColor;
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-family: 'Josefin Sans Bold';
+      }
+
+      .left {
+        background-color: $mainColor;
+        height: 100%;
+        border-radius: 28px;
+        padding: 2em;
+
+        .wrap-item {
+          background-color: $whiteColor;
+          border-radius: 28px;
+          padding: 1em 2em 1em 2em;
+          margin: 1em 0 1em 0;
+          color: $mainColor;
+
+          .item {
+
+            .name {
+              width: 70%;
+
+              @media #{$breakpoint-xs} {
+                width: 50%;
+              }
+            }
+
+            .quantity {
+              width: 10%;
+
+              @media #{$breakpoint-xs} {
+                width: 20%;
+              }
+            }
+
+            .price {
+              width: 20%;
+
+              @media #{$breakpoint-xs} {
+                width: 30%;
+              }
+            }
+
+            &:nth-child(1n + 2) {
+              margin-top: .5em;
+            }
+
+          }
+        }
+
+        @media #{$breakpoint-xs} {
+          padding: 1em;
+        }
+      }
+
+      .right {
+        background-color: $thirdColor;
+        height: 100%;
+        border-radius: 28px;
+        color: $mainColor;
+        padding: 2em;
+
+        .detail {
+          background-color: $whiteColor;
+          border-radius: 28px;
+          padding: 1em;
+          color: $mainColor;
+        }
+
+        button {
+          border-radius: 28px;
+          outline: none;
+          padding: .7em 0 .7em 0;
+        }
+
+        @media #{$breakpoint-xs} {
+          padding: 1em;
+        }
+      }
+
+      @media #{$breakpoint-md} {
+        height: auto;
+      }
+
+      @media #{$breakpoint-xs} {
+        height: auto;
+      }
+    }
+
+  }
+
+  @media #{$breakpoint-xs} {
+    height: auto;
+    padding: 4em 0 4em 0;
+  }
+}

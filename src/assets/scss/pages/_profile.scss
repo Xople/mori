@@ -49,6 +49,10 @@
     }
 
     .right {
+      a {
+        color: $mainColor;
+      }
+
       .info-top {
         width: 100%;
         height: 168px;
@@ -58,6 +62,7 @@
           height: 100%;
           border-radius: 50%;
           position: relative;
+          user-select: none;
 
           img {
             width: 148px;
@@ -80,6 +85,44 @@
               height: 120px;
             }
           }
+
+          &::after {
+            content: 'Ubah Profile';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 148px;
+            height: 148px;
+            background-color: rgba(0, 0, 0, 0.4);
+            border-radius: 50%;
+            color: $whiteColor;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: .5s;
+            cursor: pointer;
+            user-select: none;
+
+            @media #{$breakpoint-lg} {
+              width: 120px;
+              height: 120px;
+            }
+
+            @media #{$breakpoint-md} {
+              width: 100px;
+              height: 100px;
+            }
+
+            @media #{$breakpoint-xs} {
+              width: 120px;
+              height: 120px;
+            }
+          }
+
+          &:hover::after {
+            opacity: 1;
+          }
         }
 
         .name-place {
@@ -98,7 +141,6 @@
 
           @media #{$breakpoint-xs} {
             width: 120%;
-            background-color: $whiteColor;
             padding: .5em 1.3em .5em 1.3em;
             border-radius: 8px;
           }
@@ -125,7 +167,12 @@
           border: none;
           outline: none;
           border-radius: 8px;
+          padding: 0 1em 0 1em;
 
+
+          &::placeholder {
+            font-size: 14px;
+          }
 
           @media #{$breakpoint-xs} {
             height: 50px;
@@ -139,6 +186,7 @@
           padding: .7em 1.5em .7em 1.5em;
           background-color: $mainColor;
           color: $whiteColor;
+          width: 180px;
           box-shadow:
             0 0 3px 1px rgba(0, 0, 0, 0.4);
           border-radius: 8px;
@@ -147,6 +195,33 @@
         }
       }
 
+
+      .top-transactions {
+
+        .active {
+          position: absolute;
+          bottom: -7px;
+          left: 0;
+          width: 100%;
+          height: 5px;
+          background-color: $mainColor;
+        }
+
+        &:hover {
+          background-color: $gray;
+        }
+
+      }
+
+      .row-checkout {
+        .checkout {
+          width: 100%;
+          height: auto;
+          background-color: $mainColor;
+          color: $whiteColor;
+          box-shadow: 7px 7px 0 $secondColor;
+        }
+      }
 
       @media #{$breakpoint-xs} {
         padding-bottom: 5em;

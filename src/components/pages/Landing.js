@@ -1,10 +1,14 @@
 import React from 'react';
-import { logo2, shape1, suit, triangle1, triangle2 } from '../../assets/images/index';
+import { logo2, mirai, shape1, suit, triangle1, triangle2 } from '../../assets/images/index';
 import { Header } from '../layout/index';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
+import { v4 as uuid } from 'uuid';
+
+import usePreviewProducts from '../../hooks/usePreviewProducts';
 
 export default function Landing() {
+  const [latestProducts, topProducts] = usePreviewProducts()
   return (
     <>
       <Helmet>
@@ -42,38 +46,23 @@ export default function Landing() {
             <h2>Top Suit</h2>
             <img src={suit} alt="" className="suit" />
             <div className="row top-suits mt-5">
-              <div className="col-md-3 col-6">
-                <div className="card-suit">
-                  <div className="img-card"></div>
-                  <div className="title-suit pt-4 pl-3">
-                    <h5>Title Here</h5>
+              {topProducts !== null && topProducts.map(tp => (
+                <>
+                  <div className="col-md-3 col-6" key={uuid()}>
+                    <Link to={`product/detail/${tp._id}`}>
+                      <div className="card-suit pb-3">
+                        <div className="img-card">
+                          <div className="shadow"></div>
+                          <img src={mirai} alt="" />
+                        </div>
+                        <div className="title-suit pt-4 pl-3 pr-2">
+                          <h5>{tp.name}</h5>
+                        </div>
+                      </div>
+                    </Link>
                   </div>
-                </div>
-              </div>
-              <div className="col-md-3 col-6">
-                <div className="card-suit">
-                  <div className="img-card"></div>
-                  <div className="title-suit pt-4 pl-3">
-                    <h5>Title Here</h5>
-                  </div>
-                </div>
-              </div>
-              <div className="col-md-3 col-6">
-                <div className="card-suit">
-                  <div className="img-card"></div>
-                  <div className="title-suit pt-4 pl-3">
-                    <h5>Title Here</h5>
-                  </div>
-                </div>
-              </div>
-              <div className="col-md-3 col-6">
-                <div className="card-suit">
-                  <div className="img-card"></div>
-                  <div className="title-suit pt-4 pl-3">
-                    <h5>Title Here</h5>
-                  </div>
-                </div>
-              </div>
+                </>
+              ))}
             </div>
           </div>
         </div>
@@ -86,38 +75,23 @@ export default function Landing() {
               <img src={triangle2} alt="" className="triangle2" />
             </h2>
             <div className="row new-suits mt-5">
-              <div className="col-md-3 col-6">
-                <div className="card-suit">
-                  <div className="img-card"></div>
-                  <div className="title-suit pt-4 pl-3">
-                    <h5>Title Here</h5>
+              {latestProducts !== null && latestProducts.map(lp => (
+                <>
+                  <div className="col-md-3 col-6" key={uuid()}>
+                    <Link to={`product/detail/${lp._id}`}>
+                      <div className="card-suit pb-3">
+                        <div className="img-card">
+                          <div className="shadow"></div>
+                          <img src={mirai} alt="" />
+                        </div>
+                        <div className="title-suit pt-4 pl-3 pr-2">
+                          <h5>{lp.name}</h5>
+                        </div>
+                      </div>
+                    </Link>
                   </div>
-                </div>
-              </div>
-              <div className="col-md-3 col-6">
-                <div className="card-suit">
-                  <div className="img-card"></div>
-                  <div className="title-suit pt-4 pl-3">
-                    <h5>Title Here</h5>
-                  </div>
-                </div>
-              </div>
-              <div className="col-md-3 col-6">
-                <div className="card-suit">
-                  <div className="img-card"></div>
-                  <div className="title-suit pt-4 pl-3">
-                    <h5>Title Here</h5>
-                  </div>
-                </div>
-              </div>
-              <div className="col-md-3 col-6">
-                <div className="card-suit">
-                  <div className="img-card"></div>
-                  <div className="title-suit pt-4 pl-3">
-                    <h5>Title Here</h5>
-                  </div>
-                </div>
-              </div>
+                </>
+              ))}
             </div>
           </div>
         </div>

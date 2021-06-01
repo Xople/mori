@@ -123,6 +123,13 @@
 
     .right {
 
+      a {
+        text-decoration: none;
+        color: $mainColor;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+
       .wrap-button {
 
         @media #{$breakpoint-xs} {
@@ -140,6 +147,59 @@
 
         @media #{$breakpoint-xs} {
           display: block;
+        }
+      }
+
+      .wrap-menu-profile {
+        user-select: none;
+        -moz-user-select: none;
+
+        i {
+          cursor: pointer;
+        }
+
+        .menu {
+          position: absolute;
+          top: 50px;
+          right: 0;
+          z-index: 5;
+          padding: .5em 0 .5em 0;
+          background-color: $whiteColor;
+          box-shadow: 0 0 4px rgba(72, 112, 83, 0.2);
+          border-radius: 15px;
+
+          p {
+            font-size: 14px;
+            position: relative;
+
+            &:after {
+              content: '';
+              width: 40%;
+              bottom: -5px;
+              left: 0;
+              position: absolute;
+              height: 2px;
+              background-color: $mainColor;
+            }
+          }
+
+          .menu-setting {
+            padding: .3em 2em .3em;
+            border-radius: 10px;
+            -webkit-user-select: none;
+            -moz-user-select: -moz-none;
+            -ms-user-select: none;
+            user-select: none;
+            cursor: pointer;
+
+            &:hover {
+              background-color: rgba(156, 156, 156, 0.3);
+            }
+          }
+        }
+
+        @media #{$breakpoint-xs} {
+          display: none !important;
         }
       }
     }
@@ -187,6 +247,10 @@
   .preview-products {
     width: 100%;
     overflow: hidden;
+
+    a {
+      color: $mainColor;
+    }
 
     .top {
       width: 100%;
@@ -256,6 +320,26 @@
               height: 70%;
               border-radius: 8px 8px 0 0;
               background-color: $gray;
+              position: relative;
+              overflow: hidden;
+
+              .shadow {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 120%;
+                background-image: linear-gradient(to bottom, rgba(57, 59, 68, 0.5), rgba(0, 0, 0, 0));
+                border-radius: 8px 8px 0 0;
+              }
+
+
+              img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 8px 8px 0 0;
+              }
 
               @media #{$breakpoint-xs} {
                 height: 65%;
@@ -332,6 +416,26 @@
               height: 70%;
               border-radius: 8px 8px 0 0;
               background-color: $gray;
+              position: relative;
+              overflow: hidden;
+
+              .shadow {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 120%;
+                background-image: linear-gradient(to bottom, rgba(57, 59, 68, 0.5), rgba(0, 0, 0, 0));
+                border-radius: 8px 8px 0 0;
+              }
+
+
+              img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 8px 8px 0 0;
+              }
 
               @media #{$breakpoint-xs} {
                 height: 65%;
@@ -410,4 +514,6 @@
   @import './pages/cart';
   @import './pages/profile';
   @import './pages/sign';
+  @import './pages/checkout';
+  @import './pages/activate';
 }

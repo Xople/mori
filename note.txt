@@ -1,0 +1,5 @@
+- Checkout
+  Pilih hari peminjaman untuk satu atau beberapa pakaian yang akan dipinjam, setelah itu redirect ke halaman detail checkout
+
+- Signup
+  setelah signup redirect ke halaman activated setelah itu klik activated di gmail, lalu arahkan ke url blabla/token lalu hit melalui token tersebut lalu redirect ke login, selesai.

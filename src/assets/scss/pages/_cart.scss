@@ -52,6 +52,24 @@
         }
       }
 
+      .oos {
+        position: absolute;
+        bottom: -60px;
+        left: 40px;
+        width: 250px;
+        height: 250px;
+        border-radius: 15px;
+        background-color: rgba($color: $mainColor, $alpha: .6);
+        color: $whiteColor;
+
+        @media #{$breakpoint-xs} {
+          top: -30px;
+          left: 20px;
+          width: 130px;
+          height: 130px;
+        }
+      }
+
       .row-info {
         word-wrap: break-word;
 
@@ -106,6 +124,18 @@
           padding: .3em 1.5em .3em 1.5em;
           border-radius: 4px;
         }
+      }
+
+      .delete {
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        bottom: -30px;
+        right: 0;
+        border-radius: 50%;
+        background-color: $mainColor;
+        color: $whiteColor;
+        cursor: pointer;
       }
 
       @media #{$breakpoint-xs} {
